@@ -325,19 +325,14 @@ function App() {
 
   <div className="work-card work-card-featured">
     <div className="work-visual">
-      <div className="visual-label">META ADS</div>
-      <div className="visual-chart">
-        <div className="chart-line"></div>
-        <div className="chart-point point-1"></div>
-        <div className="chart-point point-2"></div>
-        <div className="chart-point point-3"></div>
-        <div className="chart-point point-4"></div>
-      </div>
-      <div className="visual-result">
-        <span>CAMPAIGN</span>
-        <strong>PERFORMANCE</strong>
-      </div>
-    </div>
+  <div className="visual-chart">
+    <div className="chart-line"></div>
+    <div className="chart-point point-1"></div>
+    <div className="chart-point point-2"></div>
+    <div className="chart-point point-3"></div>
+    <div className="chart-point point-4"></div>
+  </div>
+</div>
 
     <div className="work-info">
       <span>01 / PERFORMANCE MARKETING</span>
