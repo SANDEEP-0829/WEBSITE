@@ -46,9 +46,9 @@ function App() {
 
       {/* NAVBAR */}
 <nav className="navbar">
-  <div className="logo">
-    T<span>≡</span>NXING
-  </div>
+ <a href="#home" className="logo">
+  <img src="/tenxing-logo.png" alt="T≡NXING Agency" />
+</a>
 
   <div className="nav-links">
     <a href="#home">Home</a>
@@ -323,24 +323,39 @@ function App() {
 
        <div className="work-grid">
 
-  <div className="work-card work-card-featured">
+<div className="work-card work-card-featured">
+
     <div className="work-visual">
-  <div className="visual-chart">
-    <div className="chart-line"></div>
-    <div className="chart-point point-1"></div>
-    <div className="chart-point point-2"></div>
-    <div className="chart-point point-3"></div>
-    <div className="chart-point point-4"></div>
-  </div>
-</div>
+        <div className="visual-label">META ADS</div>
+
+        <div className="visual-chart">
+            
+            <div className="chart-point point-1"></div>
+            <div className="chart-point point-2"></div>
+            <div className="chart-point point-3"></div>
+            <div className="chart-point point-4"></div>
+        </div>
+
+        
+    </div>
 
     <div className="work-info">
-      <span>01 / PERFORMANCE MARKETING</span>
-      <h3>Meta Ads<br />Campaigns</h3>
-      <p>Paid advertising systems designed to generate qualified leads and business growth.</p>
-      <a href="#contact">View Project ↗</a>
+        <span>01 / PERFORMANCE MARKETING</span>
+
+        <h3>
+            Meta Ads
+            <br />
+            Campaigns
+        </h3>
+
+        <p>
+            Paid advertising systems designed to generate qualified leads and business growth.
+        </p>
+
+        <a href="#contact">View Project ↗</a>
     </div>
-  </div>
+
+</div>
 
 
   <div className="work-card">
@@ -364,7 +379,7 @@ function App() {
   <div className="work-card">
     <div className="work-visual brand-visual">
       <div className="brand-symbol">T≡</div>
-      <div className="brand-text">BRAND<br />SYSTEM</div>
+<div className="brand-text">BRAND SYSTEM</div>
     </div>
 
     <div className="work-info">
@@ -510,6 +525,27 @@ window.open(
           T<span>≡</span>NXING
         </div>
 
+<div className="footer-socials">
+  <a
+    href="https://www.instagram.com/tenxing_agency/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Instagram ↗
+  </a>
+
+  <a
+    href="https://www.facebook.com/tenxingagency/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Facebook ↗
+  </a>
+
+  <a href="mailto:tenxingagency@gmail.com">
+    tenxingagency@gmail.com ↗
+  </a>
+</div>
         <p>
           Digital Growth Agency
         </p>
@@ -529,5 +565,35 @@ window.open(
     </div>
   );
 }
+
+<div className="floating-social-buttons">
+  <a
+    className="floating-social whatsapp-button"
+    href="https://wa.me/917075999203"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with T≡NXING on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.5h.1C18.7 23.8 24 18.5 24 12c0-3.2-1.2-6.2-3.5-8.5ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.2-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a12.5 12.5 0 0 0 4.8 4.3c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.2-.2-.5-.4Z"/>
+    </svg>
+  </a>
+
+  <a
+    className="floating-social instagram-button"
+    href="https://www.instagram.com/tenxing_agency/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit T≡NXING on Instagram"
+    title="Follow on Instagram"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="2"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="2"/>
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+    </svg>
+  </a>
+</div>
 
 export default App;

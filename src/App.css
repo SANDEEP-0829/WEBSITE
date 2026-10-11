@@ -857,22 +857,7 @@ section {
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.chart-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 60px;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    #7c3aed,
-    #a855f7,
-    #60a5fa
-  );
-  transform: rotate(-7deg);
-  transform-origin: left center;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.7);
-}
+
 
 .chart-point {
   position: absolute;
@@ -1546,16 +1531,23 @@ section {
   pointer-events: none !important;
 }
 
+
 .work-card .work-info {
   position: absolute !important;
   left: 35px !important;
   right: 35px !important;
   bottom: 35px !important;
   top: auto !important;
-  z-index: 10 !important;
+  z-index: 50 !important;
   width: auto !important;
   margin: 0 !important;
+  background: transparent !important;
 }
+
+.work-card .work-info h3 {
+  margin: 12px 0 10px !important;
+  line-height: 1.05 !important;
+}ss
 
 .work-card .work-info span {
   display: block !important;
@@ -1619,4 +1611,354 @@ section {
   .work-card .work-info p {
     font-size: 14px !important;
   }
+}
+/* FINAL WORK CARD LAYOUT */
+
+.work-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 18px !important;
+}
+
+.work-card {
+  position: relative !important;
+  display: block !important;
+  height: 480px !important;
+  min-height: 480px !important;
+  overflow: hidden !important;
+}
+
+.work-card .work-visual {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+}
+
+.work-card .work-info {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 35px !important;
+  left: 35px !important;
+  right: 35px !important;
+  z-index: 20 !important;
+  margin: 0 !important;
+  padding: 20px !important;
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 8, 0.96),
+    rgba(5, 5, 8, 0.72),
+    transparent
+  ) !important;
+}
+.work-card .work-info > span {
+  display: block !important;
+  margin-bottom: 12px !important;
+  color: #a855f7 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+}
+
+.work-card .work-info h3 {
+  margin: 0 0 12px 0 !important;
+  color: #ffffff !important;
+  font-size: 34px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+}
+
+.work-card .work-info p {
+  margin: 0 0 15px 0 !important;
+  color: #92909b !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+.work-card .work-info a {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.work-card .work-info a:hover {
+  color: #a855f7 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .work-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .work-card {
+    height: 420px !important;
+    min-height: 420px !important;
+  }
+
+  .work-card .work-info {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 24px !important;
+  }
+
+  .work-card .work-info h3 {
+    font-size: 28px !important;
+  }
+}
+/* WORK POSITION TEST */
+
+.work-card .work-info {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 35px !important;
+  left: 35px !important;
+  right: 35px !important;
+  z-index: 999 !important;
+}
+
+/* Work card text layout fix */
+.work-card .work-info {
+  position: absolute !important;
+  left: 35px !important;
+  right: 35px !important;
+  bottom: 35px !important;
+  top: auto !important;
+  z-index: 20 !important;
+  pointer-events: auto;
+}
+
+.work-card .work-info h3 {
+  margin: 12px 0 10px !important;
+  line-height: 1.05 !important;
+}
+
+.work-card .work-visual {
+  z-index: 1 !important;
+}
+
+.work-card .work-info span,
+.work-card .work-info h3,
+.work-card .work-info p,
+.work-card .work-info a {
+  position: relative;
+  z-index: 21;
+}
+
+@media (max-width: 900px) {
+  .work-card .work-info {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    top: auto !important;
+  }
+} 
+
+/* Final fix: keep chart graphics behind card text */
+.work-card .work-visual {
+  pointer-events: none !important;
+}
+
+.work-card .work-info {
+  position: absolute !important;
+  inset: auto 35px 35px 35px !important;
+  z-index: 50 !important;
+}
+
+.work-card .work-info > * {
+  position: relative;
+  z-index: 51;
+}
+
+.work-card .chart-line,
+.work-card .chart-point,
+.work-card .visual-result {
+  pointer-events: none !important;
+}
+
+@media (max-width: 900px) {
+  .work-card .work-info {
+    inset: auto 14px 18px 14px !important;
+  }
+}
+/* FINAL FIX: keep project card graphics behind text */
+.work-card .work-visual {
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+.work-card .work-info {
+  position: absolute !important;
+  inset: auto 35px 35px 35px !important;
+  z-index: 50 !important;
+  background: transparent !important;
+}
+
+.work-card .chart-line {
+  display: none !important;
+}
+/* FINAL FIX: Hide the unwanted horizontal line in work cards */
+.work-card .visual-chart .chart-line {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  animation: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+/* REMOVE THE PURPLE HORIZONTAL LINE */
+.work-card .visual-chart .chart-line,
+.work-card .visual-chart .chart-line::before,
+.work-card .visual-chart .chart-line::after,
+.work-card .work-visual::after {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  animation: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important;
+  filter: none !important;
+}
+
+/* Remove any decorative line from the featured card */
+.work-card-featured::before {
+  border-top: none !important;
+  background: none !important;
+}
+/* FINAL OVERRIDE — remove horizontal line from first work card */
+.work-card-featured .chart-line,
+.work-card-featured .visual-chart .chart-line,
+.work-card-featured .visual-chart::before,
+.work-card-featured .visual-chart::after,
+.work-card-featured .work-visual::before,
+.work-card-featured .work-visual::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  animation: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+/* Refine project card text spacing */
+.work-card .work-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.work-card .work-info > span {
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.work-card .work-info h3 {
+  line-height: 1.2;
+  margin: 0;
+}
+
+.work-card .work-info p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.work-card .work-info a {
+  margin-top: 4px;
+}
+
+/* T≡NXING social and email links */
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.footer-socials a {
+  color: #a8a5b7;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-socials a:hover {
+  color: #a855f7;
+}
+
+/* Floating WhatsApp and Instagram buttons */
+.floating-social-buttons {
+  position: fixed;
+  right: 22px;
+  bottom: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-social {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-social svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.whatsapp-button {
+  background: #25D366;
+}
+
+.instagram-button {
+  background: linear-gradient(135deg, #833AB4, #E1306C, #FCAF45);
+}
+
+.floating-social:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.35);
+}
+
+.floating-social:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .floating-social-buttons {
+    right: 14px;
+    bottom: 18px;
+    gap: 10px;
+  }
+
+  .floating-social {
+    width: 46px;
+    height: 46px;
+  }
+}
+.logo img {
+  display: block;
+  width: 125px;
+  height: 42px;
+  object-fit: contain;
 }
